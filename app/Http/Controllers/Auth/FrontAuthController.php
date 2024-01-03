@@ -302,5 +302,17 @@ class FrontAuthController extends Controller
             return back();
         }
     }
+    // delete
+    public function post_delet_new_user($id){
+        $user = User::find($id);
+        if($user){
+            User::where('id',$id)->delete();
+            session()->flash('success','the User has been updated');
+            return back();
+        }else{
+            session()->flash('error','the User is not found');
+            return back();
 
+        }
+    }
 }

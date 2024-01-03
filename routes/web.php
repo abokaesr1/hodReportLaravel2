@@ -37,10 +37,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('post/delet-new-user/{id}', [FrontAuthController::class,'post_delet_new_user'])->name('post_user.delet');
     Route::get('post/delet-role-user/{id}', [FrontAuthController::class,'post_delet_role_user'])->name('post_user_role.delet');
     Route::get('post/delet-group-user/{id}', [FrontAuthController::class,'post_delet_group_user'])->name('post_user_group.delet');
- // edit
+    // edit
     Route::post('post/update-new-user/{id}', [FrontAuthController::class,'post_update_new_user'])->name('post_user.update');
     Route::post('post/update-role-user/{id}', [FrontAuthController::class,'post_update_role_user'])->name('post_user_role.update');
     Route::post('post/update-group-user/{id}', [FrontAuthController::class,'post_update_group_user'])->name('post_user_group.update');
+
     // Ajax Requests
     Route::post('post/databyday', [FrontAuthController::class,'databyday'])->name('databyday');
 
