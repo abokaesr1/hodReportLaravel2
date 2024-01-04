@@ -49,5 +49,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/view-traker-data', [DataTableController::class,'traker_view_table'])->name('traker.view');
     Route::get('/add-traker-data', [DataTableController::class,'traker_add_table'])->name('traker.add');
     Route::post('/post-traker-data', [DataTableController::class,'traker_post_table'])->name('traker.post');
+    Route::get('/edit-tracker-data/{id}', [DataTableController::class,'tracker_edit'])->name('tracker_data.edit');
+    Route::post('/edit-tracker-data-post/{id}', [DataTableController::class,'tracker_edit_post'])->name('tracker_data_post.edit');
+    Route::get('/delet-tracker-data/{id}', [DataTableController::class,'tracker_delete'])->name('tracker_data.delet');
+
 
 });

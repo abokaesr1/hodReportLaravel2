@@ -71,12 +71,15 @@
                                         <th>Country  </th>
                                         <th>City  </th>
                                         <th>Zip </th>
+                                        <th>ACTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($trakerdata as $data)
                                     <tr>
-                                        <td>{{ \App\Models\User::where('id',$data->user_id)->value('name'); }} </td>
+                                        <td>
+                                            {{ \App\Models\User::where('id',$data->user_id)->value('name'); }}
+                                        </td>
                                         <td>{{ \App\Models\Group::where('id',$data->group_id)->value('name') }} </td>
                                         <td>{{ $data->company_name }} </td>
                                         <td>{{ \App\Models\Group::where('id',$data->account_owner)->value('name') }} </td>
@@ -111,6 +114,12 @@
                                         <td>{{ $data->country }} </td>
                                         <td>{{ $data->city }} </td>
                                         <td>{{ $data->zip }} </td>
+                                        <td>
+                                            @if(App\Helper\Role::UserRole(auth()->user()->role_id) === 'super_admin' ||App\Helper\Role::UserRole(auth()->user()->role_id) === 'group_admin' )
+                                            <a href="{{ route('tracker_data.edit',$data->id) }}" class="btn btn-info" title="Edit"><i class="fa fa-edit"></i></a>
+                                            <a href="{{ route('tracker_data.delet',$data->id) }}" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></a>
+                                            @endif
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

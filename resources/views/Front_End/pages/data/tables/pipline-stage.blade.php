@@ -44,17 +44,17 @@
                     @endforeach
                 </tbody>
                 <!-- Grand totals in <tfoot> -->
-<tfoot>
-    <tr class="bg-dark">
-        <td class="text-white" colspan="3">GRAND TOTAL</td>
-        <td class="text-white" colspan="1">
-            {{ number_format($piplinestage->sum('expected_revenues'), 2, '.', ',') }} AED
-        </td>
-        <td class="text-white" colspan="1">
-            {{ number_format($piplinestage->sum('revenues'), 2, '.', ',') }} AED
-        </td>
-    </tr>
-</tfoot>
+                <tfoot>
+                    <tr class="bg-dark">
+                        <td class="text-white" colspan="3">GRAND TOTAL</td>
+                        <td class="text-white" colspan="1">
+                            {{ number_format($piplinestage->sum('expected_revenues'), 2, '.', ',') }} AED
+                        </td>
+                        <td class="text-white" colspan="1">
+                            {{ number_format($piplinestage->sum('revenues'), 2, '.', ',') }} AED
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     </div>
