@@ -18,6 +18,7 @@
                 </thead>
                 <tbody>
                     @foreach ($piplinestage as $data)
+                    @if ($data->stage != 'closedwon' || $data->stage != 'closedlost')
                     <tr>
                         <td>{{ $data->stage }}</td>
                         <td>
@@ -41,6 +42,7 @@
                             @endforeach
                         </td>
                     </tr>
+                    @endif
                     @endforeach
                 </tbody>
                 <!-- Grand totals in <tfoot> -->

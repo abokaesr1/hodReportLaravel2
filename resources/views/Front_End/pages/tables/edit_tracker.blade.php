@@ -176,10 +176,54 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="product_name ">Product Name </label>
-                                        <input type="text" name="product_name" id="product_name"
-                                        value="{{ $tracker->product_name }}"
-                                        class="form-control"
-                                            required>
+                                            <select name="product_name" id="product_name" class="form-control" required>
+                                                <option  @if($tracker->product_name == 'Digital Services' ) selected @endif
+                                                value="Digital Services">Digital Services </option>
+                                                <option  @if($tracker->product_name == 'Awareness Campaign' ) selected @endif
+                                                value="Awareness Campaign">Awareness Campaign </option>
+                                                <option  @if($tracker->product_name == 'Lead Gen Campaign' ) selected @endif
+                                                value="Lead Gen Campaign">Lead Gen Campaign </option>
+                                                <option  @if($tracker->product_name == 'Event Activatio' ) selected @endif
+                                                value="Event Activation"> Event Activation </option>
+                                                <option  @if($tracker->product_name == 'Video Production Services' ) selected @endif
+                                                value="Video Production Services"> Video Production Services </option>
+                                                <option  @if($tracker->product_name == 'OOH' ) selected @endif
+                                                value="OOH"> OOH </option>
+                                                <option  @if($tracker->product_name == 'Press Release' ) selected @endif
+                                                value="Press Release"> Press Release </option>
+                                                <option  @if($tracker->product_name == 'Press Conference' ) selected @endif
+                                                value="Press Conference"> Press Conference </option>
+                                                <option  @if($tracker->product_name == 'Articles' ) selected @endif
+                                                value="Articles"> Articles </option>
+                                                <option  @if($tracker->product_name == 'News Post' ) selected @endif
+                                                value="News Post"> News Post </option>
+                                                <option  @if($tracker->product_name == 'Creative Services' ) selected @endif
+                                                value="Creative Services"> Creative Services </option>
+                                                <option  @if($tracker->product_name == 'Website Development' ) selected @endif
+                                                value="Website Development"> Website Development </option>
+                                                <option  @if($tracker->product_name == 'Strategic Planning' ) selected @endif
+                                                value="Strategic Planning"> Strategic Planning </option>
+                                                <option  @if($tracker->product_name == 'Full Services (Retainer)' ) selected @endif
+                                                value="Full Services (Retainer)"> Full Services (Retainer) </option>
+                                                <option  @if($tracker->product_name == 'Digital Rental' ) selected @endif
+                                                value="Digital Rental"> Digital Rental </option>
+                                                <option  @if($tracker->product_name == 'Event Creative Static' ) selected @endif
+                                                value="Event Creative Static"> Event Creative Static </option>
+                                                <option  @if($tracker->product_name == 'Event Creative Production' ) selected @endif
+                                                value="Event Creative Production"> Event Creative Production </option>
+                                                <option  @if($tracker->product_name == 'Event Production (Stage)' ) selected @endif
+                                                value="Event Production (Stage)"> Event Production (Stage) </option>
+                                                <option  @if($tracker->product_name == 'Event Production (Rollups)' ) selected @endif
+                                                value="Event Production (Rollups)"> Event Production (Rollups) </option>
+                                                <option  @if($tracker->product_name == 'Event Production (Printing)' ) selected @endif
+                                                value="Event Production (Printing)"> Event Production (Printing) </option>
+                                                <option  @if($tracker->product_name == 'Exhibition Stand' ) selected @endif
+                                                value="Exhibition Stand"> Exhibition Stand </option>
+                                                <option  @if($tracker->product_name == 'Event AVL (Audio Visual & Lighting)' ) selected @endif
+                                                value="Event AVL (Audio Visual & Lighting)"> Event AVL (Audio Visual & Lighting) </option>
+                                                <option  @if($tracker->product_name == 'Sponsorship' ) selected @endif
+                                                value="Sponsorship"> Sponsorship </option>
+                                            </select>
                                     </div>
                                 </div>
                             </div>

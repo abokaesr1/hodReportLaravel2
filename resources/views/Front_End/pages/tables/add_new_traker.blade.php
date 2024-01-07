@@ -63,15 +63,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="line_manage">Line Manage </label>
-                                        <input type="text" name="line_manage" id="line_manage"
-                                            class="form-control">
+                                        <input type="text" name="line_manage" id="line_manage" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="contact_name">Contact Name </label>
-                                        <input type="text" name="contact_name" id="contact_name"
-                                            class="form-control">
+                                        <input type="text" name="contact_name" id="contact_name" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -79,15 +77,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="position">Position </label>
-                                        <input type="text" name="position" id="position"
-                                            class="form-control">
+                                        <input type="text" name="position" id="position" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="website">Website </label>
-                                        <input type="text" name="website" id="website"
-                                            class="form-control">
+                                        <input type="text" name="website" id="website" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -155,8 +151,31 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="product_name ">Product Name </label>
-                                        <input type="text" name="product_name" id="product_name" class="form-control"
-                                            required>
+                                        <select name="product_name" id="product_name" class="form-control" required>
+                                            <option value="Digital Services">Digital Services </option>
+                                            <option value="Awareness Campaign">Awareness Campaign </option>
+                                            <option value="Lead Gen Campaign">Lead Gen Campaign </option>
+                                            <option value="Event Activation"> Event Activation </option>
+                                            <option value="Video Production Services"> Video Production Services </option>
+                                            <option value="OOH"> OOH </option>
+                                            <option value="Press Release"> Press Release </option>
+                                            <option value="Press Conference"> Press Conference </option>
+                                            <option value="Articles"> Articles </option>
+                                            <option value="News Post"> News Post </option>
+                                            <option value="Creative Services"> Creative Services </option>
+                                            <option value="Website Development"> Website Development </option>
+                                            <option value="Strategic Planning"> Strategic Planning </option>
+                                            <option value="Full Services (Retainer)"> Full Services (Retainer) </option>
+                                            <option value="Digital Rental"> Digital Rental </option>
+                                            <option value="Event Creative Static"> Event Creative Static </option>
+                                            <option value="Event Creative Production"> Event Creative Production </option>
+                                            <option value="Event Production (Stage)"> Event Production (Stage) </option>
+                                            <option value="Event Production (Rollups)"> Event Production (Rollups) </option>
+                                            <option value="Event Production (Printing)"> Event Production (Printing) </option>
+                                            <option value="Exhibition Stand"> Exhibition Stand </option>
+                                            <option value="Event AVL (Audio Visual & Lighting)"> Event AVL (Audio Visual & Lighting) </option>
+                                            <option value="Sponsorship"> Sponsorship </option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

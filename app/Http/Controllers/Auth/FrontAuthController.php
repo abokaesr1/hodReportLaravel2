@@ -41,6 +41,8 @@ class FrontAuthController extends Controller
             DB::raw('GROUP_CONCAT(expected_revenue) as expected_revenues'),
             DB::raw('GROUP_CONCAT(revenue) as revenues')
         )
+        ->where('stage', '!=', 'closedlost')
+        ->where('stage', '!=', 'closedwon')
         ->groupBy('stage')
         ->get();
         // Convert comma-separated values to arrays and sum

@@ -15,9 +15,10 @@ class Tables {
            DB::raw('MONTH(created_at) as month'),
            DB::raw('YEAR(created_at) as year'),
            DB::raw($column_name),
+           DB::raw('product_name'),
            DB::raw('SUM(revenue) as total_revenue') // Assuming you want to sum the revenue for each group
        )->where('stage',$stage_name)
-       ->groupBy(DB::raw('MONTH(created_at)'), DB::raw('YEAR(created_at)'), $column_name)
+       ->groupBy(DB::raw('MONTH(created_at)'), DB::raw('YEAR(created_at)'), $column_name,'product_name')
        ->get();
     }
     public static function pipeline(){
