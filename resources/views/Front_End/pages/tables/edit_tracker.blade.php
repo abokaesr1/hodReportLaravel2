@@ -43,10 +43,34 @@
                             <div class="form-group">
                                 <label for="account_owner">Account Owner </label>
                                 <select name="account_owner" id="account_owner" class="form-control">
-                                    @foreach ($groups as $group)
-                                    <option @if($tracker->group_id == $group->id ) selected @endif
-                                        value="{{ $group->id }}"> {{ $group->name }}</option>
-                                    @endforeach
+                                    <option @if($tracker->account_owner == 'Sara Amin' ) selected @endif
+                                    value="Sara Amin">Sara Amin</option>
+                                    <option @if($tracker->account_owner == 'Rawan Aida' ) selected @endif
+                                    value="Rawan Aida">Rawan Aida </option>
+                                    <option @if($tracker->account_owner == 'Ahmad Rihany' ) selected @endif
+                                    value="Ahmad Rihany">Ahmad Rihany</option>
+                                    <option @if($tracker->account_owner == 'Alice Rosolen' ) selected @endif
+                                    value="Alice Rosolen">Alice Rosolen </option>
+                                    <option @if($tracker->account_owner == 'Rola Chehade' ) selected @endif
+                                    value="Rola Chehade">Rola Chehade</option>
+                                    <option @if($tracker->account_owner == 'Basma Hachouche' ) selected @endif
+                                    value="Basma Hachouche">Basma Hachouche</option>
+                                    <option @if($tracker->account_owner == 'Hadeel Abu Zied' ) selected @endif
+                                    value="Hadeel Abu Zied">Hadeel Abu Zied </option>
+                                    <option @if($tracker->account_owner == 'Wael Salha' ) selected @endif
+                                    value="Wael Salha">Wael Salha</option>
+                                    <option @if($tracker->account_owner == 'Amer Kasar' ) selected @endif
+                                    value="Amer Kasar">Amer Kasar</option>
+                                    <option @if($tracker->account_owner == 'Serena Laham' ) selected @endif
+                                    value="Serena Laham">Serena Laham </option>
+                                    <option @if($tracker->account_owner == 'Gloria Roffaell' ) selected @endif
+                                    value="Gloria Roffaell">Gloria Roffaell</option>
+                                    <option @if($tracker->account_owner == 'Jayson Nayak' ) selected @endif
+                                    value="Jayson Nayak">Jayson Nayak</option>
+                                    <option @if($tracker->account_owner == 'Affaf Sharkawy' ) selected @endif
+                                    value="Affaf Sharkawy">Affaf Sharkawy</option>
+                                    <option @if($tracker->account_owner == 'Duaa Mubarak' ) selected @endif
+                                    value="Duaa Mubarak">Duaa Mubarak</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -177,52 +201,34 @@
                                     <div class="form-group">
                                         <label for="product_name ">Product Name </label>
                                             <select name="product_name" id="product_name" class="form-control" required>
-                                                <option  @if($tracker->product_name == 'Digital Services' ) selected @endif
-                                                value="Digital Services">Digital Services </option>
-                                                <option  @if($tracker->product_name == 'Awareness Campaign' ) selected @endif
-                                                value="Awareness Campaign">Awareness Campaign </option>
-                                                <option  @if($tracker->product_name == 'Lead Gen Campaign' ) selected @endif
-                                                value="Lead Gen Campaign">Lead Gen Campaign </option>
-                                                <option  @if($tracker->product_name == 'Event Activatio' ) selected @endif
-                                                value="Event Activation"> Event Activation </option>
-                                                <option  @if($tracker->product_name == 'Video Production Services' ) selected @endif
-                                                value="Video Production Services"> Video Production Services </option>
-                                                <option  @if($tracker->product_name == 'OOH' ) selected @endif
-                                                value="OOH"> OOH </option>
-                                                <option  @if($tracker->product_name == 'Press Release' ) selected @endif
-                                                value="Press Release"> Press Release </option>
-                                                <option  @if($tracker->product_name == 'Press Conference' ) selected @endif
-                                                value="Press Conference"> Press Conference </option>
-                                                <option  @if($tracker->product_name == 'Articles' ) selected @endif
-                                                value="Articles"> Articles </option>
-                                                <option  @if($tracker->product_name == 'News Post' ) selected @endif
-                                                value="News Post"> News Post </option>
-                                                <option  @if($tracker->product_name == 'Creative Services' ) selected @endif
-                                                value="Creative Services"> Creative Services </option>
-                                                <option  @if($tracker->product_name == 'Website Development' ) selected @endif
-                                                value="Website Development"> Website Development </option>
-                                                <option  @if($tracker->product_name == 'Strategic Planning' ) selected @endif
-                                                value="Strategic Planning"> Strategic Planning </option>
-                                                <option  @if($tracker->product_name == 'Full Services (Retainer)' ) selected @endif
-                                                value="Full Services (Retainer)"> Full Services (Retainer) </option>
-                                                <option  @if($tracker->product_name == 'Digital Rental' ) selected @endif
-                                                value="Digital Rental"> Digital Rental </option>
-                                                <option  @if($tracker->product_name == 'Event Creative Static' ) selected @endif
-                                                value="Event Creative Static"> Event Creative Static </option>
-                                                <option  @if($tracker->product_name == 'Event Creative Production' ) selected @endif
-                                                value="Event Creative Production"> Event Creative Production </option>
-                                                <option  @if($tracker->product_name == 'Event Production (Stage)' ) selected @endif
-                                                value="Event Production (Stage)"> Event Production (Stage) </option>
-                                                <option  @if($tracker->product_name == 'Event Production (Rollups)' ) selected @endif
-                                                value="Event Production (Rollups)"> Event Production (Rollups) </option>
-                                                <option  @if($tracker->product_name == 'Event Production (Printing)' ) selected @endif
-                                                value="Event Production (Printing)"> Event Production (Printing) </option>
-                                                <option  @if($tracker->product_name == 'Exhibition Stand' ) selected @endif
-                                                value="Exhibition Stand"> Exhibition Stand </option>
-                                                <option  @if($tracker->product_name == 'Event AVL (Audio Visual & Lighting)' ) selected @endif
-                                                value="Event AVL (Audio Visual & Lighting)"> Event AVL (Audio Visual & Lighting) </option>
-                                                <option  @if($tracker->product_name == 'Sponsorship' ) selected @endif
-                                                value="Sponsorship"> Sponsorship </option>
+                                                <option value="Creative"
+                                                @if($tracker->product_name == 'Creative' ) selected @endif
+                                                >Creative   </option>
+                                                <option value="Strategy"
+                                                @if($tracker->product_name == 'Strategy' ) selected @endif
+                                                >Strategy  </option>
+                                                <option value="Social Media"
+                                                @if($tracker->product_name == 'Social Media' ) selected @endif
+                                                >Social Media  </option>
+                                                <option value="AV Production"
+                                                @if($tracker->product_name == 'AV Production' ) selected @endif
+                                                > AV Production  </option>
+                                                <option value="PR"
+                                                @if($tracker->product_name == 'PR' ) selected @endif
+                                                > PR
+                                                </option>
+                                                <option value="Events"
+                                                @if($tracker->product_name == 'Events' ) selected @endif
+                                                > Events  </option>
+                                                <option value="Media Buying Online"
+                                                @if($tracker->product_name == 'Media Buying Online' ) selected @endif
+                                                > Media Buying Online  </option>
+                                                <option value="Media Buying Offline"
+                                                @if($tracker->product_name == 'Media Buying Offline' ) selected @endif
+                                                > Media Buying Offline  </option>
+                                                <option value="Others"
+                                                @if($tracker->product_name == 'Others' ) selected @endif
+                                                > Others  </option>
                                             </select>
                                     </div>
                                 </div>

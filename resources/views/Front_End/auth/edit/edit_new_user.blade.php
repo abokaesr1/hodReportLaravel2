@@ -74,7 +74,7 @@
                                 data-parsley-required data-parsley-trigger-after-failure="change"
                                 data-parsley-errors-container="#error-multiselect">
                                     @foreach ($groups as $group)
-                                    <option  @if ($user->group_id === $role->id) selected @endif
+                                    <option  @if ($user->group_id === $group->id) selected @endif
                                         value="{{ $group->id }}">{{ $group->name }}</option>
                                     @endforeach
 

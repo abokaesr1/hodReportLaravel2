@@ -3,8 +3,8 @@
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card number-chart">
             <div class="body">
-                <span class="text-uppercase">Total revenue</span>
-                <h4 class="mb-0 mt-2" id="totalRevenue">{{ number_format($trackerData->sum('revenue'), 2, '.', ',') }} <i class="fa fa-level-up font-12"></i></h4>
+                <span class="text-uppercase">Total Contract Value</span>
+                <h4 class="mb-0 mt-2" id="totalRevenue">{{ number_format($trackerData->sum('revenue')) }} <i class="fa fa-level-up font-12"></i></h4>
                 <small class="text-muted">Analytics For </small>
                 <select name="days_revenue" id="days_revenue" class="form-control mt-2 mb-4">
                     <option value="alldata"> ALL DATA </option>
@@ -20,8 +20,8 @@
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card number-chart">
             <div class="body">
-                <span class="text-uppercase">Total expected revenue.</span>
-                <h4 class="mb-0 mt-2" id="expected_revenue">{{ number_format($trackerData->sum('expected_revenue'), 2, '.', ',') }}</h4>
+                <span class="text-uppercase">Total Expected Contract Value </span>
+                <h4 class="mb-0 mt-2" id="expected_revenue">{{ number_format($trackerData->sum('expected_revenue')) }}</h4>
                 <small class="text-muted" >Analytics for</small>
                 <select name="days_expected_revenue" id="days_expected_revenue" class="form-control mt-2 mb-4">
                     <option value="alldata"> ALL DATA </option>
@@ -57,7 +57,7 @@
             <div class="body">
                 <div class="icon"><i class="fa fa-flag"></i> </div>
                 <div class="content">
-                    <div class="text mb-2 text-uppercase">TOTAL CHILLD ACCOUNTS</div>
+                    <div class="text mb-2 text-uppercase">TOTAL CHILD ACCOUNTS</div>
                     <h4 class="mb-0 mt-2">{{ count($childAccounts) }}</h4>
                 </div>
             </div>

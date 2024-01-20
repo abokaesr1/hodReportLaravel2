@@ -43,9 +43,20 @@
                             <div class="form-group">
                                 <label for="account_owner">Account Owner </label>
                                 <select name="account_owner" id="account_owner" class="form-control">
-                                    @foreach ($groups as $group)
-                                    <option value="{{ $group->id }}"> {{ $group->name }}</option>
-                                    @endforeach
+                                    <option value="Sara Amin">Sara Amin</option>
+                                    <option value="Rawan Aida">Rawan Aida </option>
+                                    <option value="Ahmad Rihany">Ahmad Rihany</option>
+                                    <option value="Alice Rosolen">Alice Rosolen </option>
+                                    <option value="Rola Chehade">Rola Chehade</option>
+                                    <option value="Basma Hachouche">Basma Hachouche</option>
+                                    <option value="Hadeel Abu Zied">Hadeel Abu Zied </option>
+                                    <option value="Wael Salha">Wael Salha</option>
+                                    <option value="Amer Kasar">Amer Kasar</option>
+                                    <option value="Serena Laham">Serena Laham </option>
+                                    <option value="Gloria Roffaell">Gloria Roffaell</option>
+                                    <option value="Jayson Nayak">Jayson Nayak</option>
+                                    <option value="Affaf Sharkawy">Affaf Sharkawy</option>
+                                    <option value="Duaa Mubarak">Duaa Mubarak</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -143,8 +154,9 @@
                                     <div class="form-group">
                                         <label for="customer_type">Customer Type </label>
                                         <select name="customer_type" id="customer_type" class="form-control" required>
-                                            <option value="project">Project</option>
+                                            <option value="adhoc">Adhoc</option>
                                             <option value="retainer"> Retainer</option>
+                                            <option value="tender"> Tender</option>
                                         </select>
                                     </div>
                                 </div>
@@ -152,29 +164,16 @@
                                     <div class="form-group">
                                         <label for="product_name ">Product Name </label>
                                         <select name="product_name" id="product_name" class="form-control" required>
-                                            <option value="Digital Services">Digital Services </option>
-                                            <option value="Awareness Campaign">Awareness Campaign </option>
-                                            <option value="Lead Gen Campaign">Lead Gen Campaign </option>
-                                            <option value="Event Activation"> Event Activation </option>
-                                            <option value="Video Production Services"> Video Production Services </option>
-                                            <option value="OOH"> OOH </option>
-                                            <option value="Press Release"> Press Release </option>
-                                            <option value="Press Conference"> Press Conference </option>
-                                            <option value="Articles"> Articles </option>
-                                            <option value="News Post"> News Post </option>
-                                            <option value="Creative Services"> Creative Services </option>
-                                            <option value="Website Development"> Website Development </option>
-                                            <option value="Strategic Planning"> Strategic Planning </option>
-                                            <option value="Full Services (Retainer)"> Full Services (Retainer) </option>
-                                            <option value="Digital Rental"> Digital Rental </option>
-                                            <option value="Event Creative Static"> Event Creative Static </option>
-                                            <option value="Event Creative Production"> Event Creative Production </option>
-                                            <option value="Event Production (Stage)"> Event Production (Stage) </option>
-                                            <option value="Event Production (Rollups)"> Event Production (Rollups) </option>
-                                            <option value="Event Production (Printing)"> Event Production (Printing) </option>
-                                            <option value="Exhibition Stand"> Exhibition Stand </option>
-                                            <option value="Event AVL (Audio Visual & Lighting)"> Event AVL (Audio Visual & Lighting) </option>
-                                            <option value="Sponsorship"> Sponsorship </option>
+                                            <option value="Creative">Creative   </option>
+                                            <option value="Strategy">Strategy  </option>
+                                            <option value="Social Media">Social Media  </option>
+                                            <option value="AV Production"> AV Production  </option>
+                                            <option value="PR"> PR
+                                            </option>
+                                            <option value="Events"> Events  </option>
+                                            <option value="Media Buying Online"> Media Buying Online  </option>
+                                            <option value="Media Buying Offline"> Media Buying Offline  </option>
+                                            <option value="Others"> Others  </option>
                                         </select>
                                     </div>
                                 </div>
@@ -332,7 +331,7 @@
             }
             $('#type').val(type);
             // Show/hide "Quote Created" based on stageVal
-            if (stageVal == 'proposal') {
+            if (stageVal == 'proposal' || stageVal =='closedwon' ) {
                 $('#quote-created-container').show();
                 // Automatically set the value to "YES" if stageVal is "proposal"
                 $('input[name="quote_created"]').val(['1']);

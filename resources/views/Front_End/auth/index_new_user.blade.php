@@ -53,6 +53,9 @@
                                                 </label>
                                             </th>
                                             <th>Name</th>
+                                            <th>Role</th>
+                                            <th>Group Leader</th>
+                                            <th>Name</th>
                                             <th>EMAIL</th>
                                             <th>STATUS</th>
                                             <th>ACTION</th>
@@ -71,8 +74,15 @@
                                                     <img src="{{ asset('Front_end/assets/images/xs/avatar1.jpg') }}"
                                                     class="rounded-circle avatar" alt="">
                                                     <p class="c_name">{{ $user->name }}
-                                                        <span class="badge badge-default m-l-10 hidden-sm-down">
-                                                            {{ $user->Role[0]['name'] }}</span></p>
+                                                        </p>
+                                                </td>
+                                                <td>
+                                                    <span class="phone">
+                                                        <i class="zmdi zmdi-phone m-r-10"></i> {{ $user->Role[0]['name'] }}</span>
+                                                </td>
+                                                <td>
+                                                    <span class="phone">
+                                                        <i class="zmdi zmdi-phone m-r-10"></i>{{ $user->Group[0]['name'] }}</span>
                                                 </td>
                                                 <td>
                                                     <span class="phone">

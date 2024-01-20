@@ -22,14 +22,14 @@
                         <td>{{ $item->month }} / {{ $item->year }}</td>
                         <td>{{ $item->company_name }}  <i class="fa fa-level-up"></i></td>
                         <td>{{ $item->product_name }}  <i class="fa fa-level-up"></i></td>
-                        <td>{{ $item->total_revenue }} AED </td>
+                        <td>{{ number_format($item->total_revenue) }} AED </td>
                     </tr>
                     @endforeach
                 </tbody>
                 <tfoot>
                     <tr class="bg-dark">
                         <td class="text-white" colspan="3">GRAND TOTAL</td>
-                        <td class="text-white" colspan="1">{{ $closed_won_by_product_date->sum('total_revenue') }} AED
+                        <td class="text-white" colspan="1">{{ number_format($closed_won_by_product_date->sum('total_revenue')) }} AED
                         </td>
                     </tr>
                 </tfoot>

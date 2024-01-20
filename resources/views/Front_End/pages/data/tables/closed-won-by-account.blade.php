@@ -19,14 +19,14 @@
                     <tr>
                         <td>{{ $item->month }} / {{ $item->year }}</td>
                         <td>{{ $item->customer_type }}  <i class="fa fa-level-up"></i></td>
-                        <td>{{ $item->total_revenue }} AED </td>
+                        <td>{{ number_format($item->total_revenue) }} AED </td>
                     </tr>
                     @endforeach
                 </tbody>
                 <tfoot>
                     <tr class="bg-dark">
                         <td class="text-white" colspan="2">GRAND TOTAL</td>
-                        <td class="text-white" colspan="1">{{ $closed_won_by_customer_type->sum('total_revenue') }} AED
+                        <td class="text-white" colspan="1">{{ number_format($closed_won_by_customer_type->sum('total_revenue')) }} AED
                         </td>
                     </tr>
                 </tfoot>
