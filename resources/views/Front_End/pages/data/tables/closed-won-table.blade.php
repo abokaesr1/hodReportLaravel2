@@ -42,8 +42,8 @@
                         <td>
                             <div>{{ $data->product_name }}</div>
                         </td>
-                        <td>
-                            <div>{{ $data->comments }}</div>
+                        <td style="white-space: normal">
+                            <div style="white-space: normal">{{ $data->comments }}</div>
                         </td>
                         <td>
                             <div>{{number_format($data->revenue) }} AED</div>

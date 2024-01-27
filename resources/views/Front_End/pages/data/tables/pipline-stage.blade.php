@@ -50,10 +50,10 @@
                     <tr class="bg-dark">
                         <td class="text-white" colspan="3">GRAND TOTAL</td>
                         <td class="text-white" colspan="1">
-                            {{ number_format($piplinestage->sum('expected_revenues')) }} AED
+                            {{ number_format($piplinestage->sum('expected_revenue')) }} AED
                         </td>
                         <td class="text-white" colspan="1">
-                            {{ number_format($piplinestage->sum('revenues')) }} AED
+                            {{ number_format($piplinestage->sum('revenue')) }} AED
                         </td>
                     </tr>
                 </tfoot>
