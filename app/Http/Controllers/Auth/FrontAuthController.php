@@ -53,7 +53,9 @@ class FrontAuthController extends Controller
         'account_owner',
         'last_contact_date',
         'expected_close_date',
-        'product_name'
+        'product_name',
+        'comments',
+        'revenue'
         )
         ->groupBy(DB::raw('MONTH(created_at)'), DB::raw('YEAR(created_at)'),
         'company_name',
@@ -61,10 +63,11 @@ class FrontAuthController extends Controller
         'account_owner',
         'last_contact_date',
         'expected_close_date',
-        'product_name'
+        'product_name',
+        'comments',
+        'revenue'
         )
         ->get();
-        dd($closed_won_table);
         $trackerData = Trackersheet::get();
         $parentAccounts = Trackersheet::where('parent_account' , 1)->get();
         $childAccounts = Trackersheet::where('chil_account' , 1)->get();
@@ -78,6 +81,7 @@ class FrontAuthController extends Controller
             'parentAccounts',
             'childAccounts',
             'piplinestage',
+            'closed_won_table',
             'closed_won_by_product_date',
             'closed_won_by_customer_type',
             'closed_won_by_account_owner'
