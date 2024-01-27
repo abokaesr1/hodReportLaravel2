@@ -13,7 +13,7 @@
                       <th>MONTH</th>
                       <th>COMPANY NAME</th>
                       <th>PRODUCT NAME</th>
-                      <th>REVENUE</th>
+                      <th>CONTRACT VALUE</th>
                     </tr>
                 </thead>
                 <tbody>

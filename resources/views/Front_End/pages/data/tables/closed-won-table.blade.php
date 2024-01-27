@@ -9,10 +9,13 @@
             <table class="table table-bordered table-striped table-hover dataTable js-exportable mb-0">
                 <thead>
                     <tr>
-                      <th>STAGE</th>
+                      <th>MONTH</th>
                       <th>COMPANY NAME</th>
                       <th>ACCOUNT OWNER</th>
-                      <th>EXPECTED CONTRACT VALUE</th>
+                      <th>Expected Close Date</th>
+                      <th>Contract End  Date</th>
+                      <th>Service  Name</th>
+                      <th>Comments</th>
                       <th>CONTRACT VALUE</th>
                     </tr>
                 </thead>
@@ -22,24 +25,24 @@
                     <tr>
                         <td>{{ $data->stage }}</td>
                         <td>
-
-                                <div>{{ $data->company_name }}</div>
-
+                            @foreach(explode(',', $data->company_names) as $company)
+                                <div>{{ $company }}</div>
+                            @endforeach
                         </td>
                         <td>
-
-                                <div>{{ $data->account_owner }}</div>
-
+                            @foreach(explode(',', $data->account_owners) as $owner)
+                                <div>{{ $owner }}</div>
+                            @endforeach
                         </td>
                         <td>
-
-                                <div>{{ number_format($data->expected_revenue) }} AED</div>
-
+                            @foreach(explode(',', $data->expected_revenues) as $expectedRevenue)
+                                <div>{{ number_format($expectedRevenue) }} AED</div>
+                            @endforeach
                         </td>
                         <td>
-
-                                <div>{{ number_format($data->revenue) }} AED</div>
-
+                            @foreach(explode(',', $data->revenues) as $revenue)
+                                <div>{{ number_format($revenue) }} AED</div>
+                            @endforeach
                         </td>
                     </tr>
                     @endif

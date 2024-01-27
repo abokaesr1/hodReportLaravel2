@@ -58,8 +58,8 @@
                                         <th>Website </th>
                                         <th>Stage </th>
                                         <th>Probability</th>
-                                        <th>Revenue</th>
-                                        <th>Expected Revenue </th>
+                                        <th>Contract Value</th>
+                                        <th>Expected Contract Value </th>
                                         <th>Type</th>
                                         <th>Quote Created</th>
                                         <th>Customer Type</th>
@@ -67,8 +67,8 @@
                                         <th>Comments</th>
                                         <th>Action to Take</th>
                                         <th>Last Contact Date </th>
-                                        <th>Next Contact Date </th>
-                                        <th>Expected Close Date</th>
+                                        <th>Expected Close Date </th>
+                                        <th>Contract End Date</th>
                                         <th>Email </th>
                                         <th>Phone </th>
                                         <th>Address </th>
@@ -86,7 +86,7 @@
                                         </td>
                                         <td>{{ \App\Models\Group::where('id',$data->group_id)->value('name') }} </td>
                                         <td>{{ $data->company_name }} </td>
-                                        <td>{{$data->account_owner }} </td>
+                                        <td>{{ $data->account_owner }} </td>
                                         <td>@if($data->parent_account == 1 )
                                             <span class=" badge badge-success"> YES</span> @else
                                             <span class=" badge badge-danger"> NO</span> @endif</td>
@@ -102,8 +102,8 @@
                                         <td>{{ $data->website }} </td>
                                         <td>{{ $data->stage }} </td>
                                         <td>{{ $data->probability }} </td>
-                                        <td>{{ $data->revenue }} </td>
-                                        <td>{{ $data->expected_revenue }} </td>
+                                        <td>{{ number_format($data->revenue) }} </td>
+                                        <td>{{ number_format($data->expected_revenue) }} </td>
                                         <td>{{ $data->type }} </td>
                                         <td>{{ $data->quote_created }} </td>
                                         <td>{{ $data->customer_type }} </td>

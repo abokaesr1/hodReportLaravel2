@@ -11,14 +11,14 @@
                     <tr>
                       <th>MONTH</th>
                       <th>ACCOUNT OWNER</th>
-                      <th>REVENUE</th>
+                      <th>CONTRACT VALUE</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($closed_won_by_account_owner as $item)
                     <tr>
                         <td>{{ $item->month }} / {{ $item->year }}</td>
-                        <td>{{ \App\Models\Group::where('id', $item->account_owner )->value('name') }}
+                        <td>{{ $item->account_owner  }}
                             <i class="fa fa-level-up"></i></td>
                         <td>{{ number_format($item->total_revenue) }} AED </td>
                     </tr>

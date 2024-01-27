@@ -11,7 +11,7 @@
                     <tr>
                       <th>MONTH</th>
                       <th>CONTRACT TYPE</th>
-                      <th>REVENUE</th>
+                      <th>CONTRACT VALUE</th>
                     </tr>
                 </thead>
                 <tbody>

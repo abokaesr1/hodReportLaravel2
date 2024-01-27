@@ -71,6 +71,8 @@
                                     value="Affaf Sharkawy">Affaf Sharkawy</option>
                                     <option @if($tracker->account_owner == 'Duaa Mubarak' ) selected @endif
                                     value="Duaa Mubarak">Duaa Mubarak</option>
+                                    <option @if($tracker->account_owner == 'Haneen Alatrash' ) selected @endif
+                                        value="Haneen Alatrash">Haneen Alatrash</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -85,43 +87,6 @@
                                 <input type="text" name="parent_company"
                                 value="{{ $tracker->parent_company }}"
                                 id="parent_company" class="form-control">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="line_manage">Line Manage </label>
-                                        <input type="text" name="line_manage"
-                                        value="{{ $tracker->line_manage }}"
-                                        id="line_manage"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="contact_name">Contact Name </label>
-                                        <input type="text" name="contact_name" id="contact_name"
-                                        value="{{ $tracker->contact_name }}"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="position">Position </label>
-                                        <input type="text" name="position" id="position"
-                                        value="{{ $tracker->position }}"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="website">Website </label>
-                                        <input type="text" name="website" id="website"
-                                        value="{{ $tracker->website }}"
-                                            class="form-control">
-                                    </div>
-                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -190,10 +155,61 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label for="line_manage">Line Manage </label>
+                                        <input type="text" name="line_manage"
+                                        value="{{ $tracker->line_manage }}"
+                                        id="line_manage"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact_name">Contact Name </label>
+                                        <input type="text" name="contact_name" id="contact_name"
+                                        value="{{ $tracker->contact_name }}"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="position">Position </label>
+                                        <input type="text" name="position" id="position"
+                                        value="{{ $tracker->position }}"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="website">Website </label>
+                                        <input type="text" name="website" id="website"
+                                        value="{{ $tracker->website }}"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
                                         <label for="customer_type">Customer Type </label>
                                         <select name="customer_type" id="customer_type" class="form-control" required>
-                                            <option value="project"  @if($tracker->customer_type == 'project') checked @endif >Project</option>
-                                            <option value="retainer"  @if($tracker->customer_type == 'retainer' ) checked @endif > Retainer</option>
+                                            <option
+                                            @if($tracker->customer_type == 'adhoc' ) checked @endif
+                                            value="adhoc">Adhoc</option>
+                                            <option
+                                            @if($tracker->customer_type == 'retainer' ) checked @endif
+                                            value="retainer"> Retainer</option>
+                                            <option
+                                            @if($tracker->customer_type == 'tender' ) checked @endif
+                                            value="tender"> Tender</option>
+                                            <option
+                                            @if($tracker->customer_type == 'project' ) checked @endif
+                                            value="project"> Project</option>
+                                            <option
+                                            @if($tracker->customer_type == 'pitch' ) checked @endif
+                                            value="pitch"> Pitch </option>
                                         </select>
                                     </div>
                                 </div>

@@ -35,21 +35,36 @@ class FrontAuthController extends Controller
         $closed_won_by_account_owner = Tables::tableData('closedwon','account_owner');
 // data table of piplineStage
         $piplinestage = Trackersheet::select(
-            'stage',
-            DB::raw('GROUP_CONCAT(company_name) as company_names'),
-            DB::raw('GROUP_CONCAT(account_owner) as account_owners'),
-            DB::raw('GROUP_CONCAT(expected_revenue) as expected_revenues'),
-            DB::raw('GROUP_CONCAT(revenue) as revenues')
+           'stage',
+           'company_name',
+           'account_owner',
+           'expected_revenue',
+           'revenue'
         )
         ->where('stage', '!=', 'closedlost')
         ->where('stage', '!=', 'closedwon')
-        ->groupBy('stage')
+        ->groupBy('stage','company_name','account_owner','expected_revenue','revenue')
         ->get();
-        // Convert comma-separated values to arrays and sum
-        foreach ($piplinestage as $data) {
-            $data->expected_revenues = array_sum(array_map('floatval', explode(',', $data->expected_revenues)));
-            $data->revenues = array_sum(array_map('floatval', explode(',', $data->revenues)));
-        }
+        $closed_won_table = Trackersheet::select(
+        DB::raw('MONTH(created_at) as month'),
+        DB::raw('YEAR(created_at) as year'),
+        'company_name',
+        'customer_type',
+        'account_owner',
+        'last_contact_date',
+        'expected_close_date',
+        'product_name'
+        )
+        ->groupBy(DB::raw('MONTH(created_at)'), DB::raw('YEAR(created_at)'),
+        'company_name',
+        'customer_type',
+        'account_owner',
+        'last_contact_date',
+        'expected_close_date',
+        'product_name'
+        )
+        ->get();
+        dd($closed_won_table);
         $trackerData = Trackersheet::get();
         $parentAccounts = Trackersheet::where('parent_account' , 1)->get();
         $childAccounts = Trackersheet::where('chil_account' , 1)->get();
@@ -121,7 +136,7 @@ class FrontAuthController extends Controller
 
         if(Auth::attempt(['email'=>$data['email'],'password'=>$data['password']])){
             if(auth()->user()->status == 1){
-                session()->flash('success','welecom '. auth()->user()->name);
+                session()->flash('success','Welcome '. auth()->user()->name);
                 return redirect()->route('dashboard');
             }else{
                 session()->flash('error','the user can not open this page, please contact the admin');

@@ -57,6 +57,7 @@
                                     <option value="Jayson Nayak">Jayson Nayak</option>
                                     <option value="Affaf Sharkawy">Affaf Sharkawy</option>
                                     <option value="Duaa Mubarak">Duaa Mubarak</option>
+                                    <option value="Haneen Alatrash">Haneen Alatrash</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -69,34 +70,6 @@
                             <div class="form-group" id="parent_section" style="display: none">
                                 <label for="parent_company">Parent Company </label>
                                 <input type="text" name="parent_company" id="parent_company" class="form-control">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="line_manage">Line Manage </label>
-                                        <input type="text" name="line_manage" id="line_manage" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="contact_name">Contact Name </label>
-                                        <input type="text" name="contact_name" id="contact_name" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="position">Position </label>
-                                        <input type="text" name="position" id="position" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="website">Website </label>
-                                        <input type="text" name="website" id="website" class="form-control">
-                                    </div>
-                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -149,6 +122,35 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="line_manage">Line Manage </label>
+                                        <input type="text" name="line_manage" id="line_manage" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact_name">Contact Name </label>
+                                        <input type="text" name="contact_name" id="contact_name" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="position">Position </label>
+                                        <input type="text" name="position" id="position" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="website">Website </label>
+                                        <input type="text" name="website" id="website" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -157,6 +159,8 @@
                                             <option value="adhoc">Adhoc</option>
                                             <option value="retainer"> Retainer</option>
                                             <option value="tender"> Tender</option>
+                                            <option value="project"> Project</option>
+                                            <option value="pitch"> Pitch </option>
                                         </select>
                                     </div>
                                 </div>
